@@ -1,7 +1,7 @@
 # Aadhaar OCR – Server (Backend)
 
 This is the **backend (server)** of the Aadhaar OCR system.  
-It is built with **Node.js, Express.js, and MongoDB** and provides RESTful APIs for Aadhaar card OCR processing.  
+It is built with **Node.js, Express.js** and provides RESTful APIs for Aadhaar card OCR processing.  
 
 ---
 
