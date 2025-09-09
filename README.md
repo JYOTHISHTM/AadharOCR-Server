@@ -1,34 +1,88 @@
-# Aadhaar OCR Backend (Node + Express + TypeScript + Google Vision)
+# Aadhaar OCR – Server (Backend)
 
-## Quick Start
-1) Install dependencies:
-   ```bash
-   npm install
-   ```
-2) Copy `.env.example` to `.env` and set values:
-   - `PORT=5000`
-   - `CLIENT_ORIGIN=http://localhost:5173`
-   - Set Google credentials:
-     - Preferred: `GOOGLE_APPLICATION_CREDENTIALS=/absolute/path/to/service-account.json`
-       (This environment variable is read by Google SDK automatically.)
-     - Or: `KEYFILE=/absolute/path/to/service-account.json` (the app will pass it explicitly).
+This is the **backend (server)** of the Aadhaar OCR system.  
+It is built with **Node.js, Express.js, and MongoDB** and provides RESTful APIs for Aadhaar card OCR processing.  
 
-3) Start in dev:
-   ```bash
-   npm run dev
-   ```
+---
 
-4) Build + run:
-   ```bash
-   npm run build
-   npm start
-   ```
+## 🚀 Features
 
-## API
-- **POST** `/api/ocr` (multipart/form-data)
-  - fields: `front` (image), `back` (image), both required
-  - returns: JSON with `rawText` and `extracted` fields
+- Handle **Aadhaar front & back image uploads**.  
+- Process images using OCR (Tesseract.js).  
+- Extract Aadhaar card details from uploaded images.  
+- Store extracted data in **MongoDB**.  
+- Provide secure APIs for frontend to consume.  
 
-## Security & Privacy
-- No images or text are stored server-side. All processing is in-memory.
-- Ensure you comply with local laws/regulations before processing real IDs.
+---
+
+## 🖥️ Tech Stack
+
+- **Node.js** (Runtime)  
+- **Express.js** (Server Framework)  
+- **MongoDB** (Database)  
+- **Mongoose** (ODM)  
+- **Multer** (File Uploads)  
+- **Tesseract.js** (OCR Engine)  
+- Deployment → **Render / Railway / VPS**  
+
+---
+```
+## 📂 Project Structure
+Backend/
+└── src/
+├── config/
+│ └── db.js
+├── controllers/
+│ └── ocrController.js
+├── models/
+│ └── Aadhaar.js
+├── routes/
+│ └── ocrRoutes.js
+├── utils/
+│ └── ocrHelper.js
+└── server.js
+```
+
+## ⚙️ Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/AadhaarOCR-Server.git
+```
+⚙️ Environment Variables
+
+Create a .env.example file in the backend/ folder:
+```env.examlpe
+PORT=5000
+MONGO_URI=mongodb://localhost:27017/aadhaarOCR
+CLOUDINARY_URL=your_cloudinary_url
+```
+## 🛠️ Setup Instructions
+
+Navigate to the backend folder:
+```
+cd backend
+```
+Install dependencies:
+```
+npm install
+```
+
+Build and Run the development server:
+```
+npm run build
+npm run dev
+```
+
+API Base URL:
+``
+example : http://localhost:5000
+``
+📄 License
+
+This project is licensed under the JYOTHISH T M
+
+
+
+
