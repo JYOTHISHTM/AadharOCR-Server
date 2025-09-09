@@ -20,7 +20,6 @@ It is built with **Node.js, Express.js** and provides RESTful APIs for Aadhaar c
 - **Node.js** (Runtime)  
 - **Express.js** (Server Framework)  
 - **MongoDB** (Database)  
-- **Mongoose** (ODM)  
 - **Multer** (File Uploads)  
 - **Tesseract.js** (OCR Engine)  
 - Deployment → **Render / Railway / VPS**  
@@ -30,17 +29,24 @@ It is built with **Node.js, Express.js** and provides RESTful APIs for Aadhaar c
 ## 📂 Project Structure
 Backend/
 └── src/
-├── config/
-│ └── db.js
-├── controllers/
-│ └── ocrController.js
-├── models/
-│ └── Aadhaar.js
-├── routes/
-│ └── ocrRoutes.js
-├── utils/
-│ └── ocrHelper.js
-└── server.js
+
+C:.
+│   index.ts
+│   
+├───config
+│       env.ts
+│
+├───controllers
+│       ocr.controller.ts
+│
+├───routes
+│       ocr.routes.ts
+│
+├───services
+│       ocr.service.ts
+│
+└───utils
+        parsers.ts
 ```
 
 ## ⚙️ Getting Started
